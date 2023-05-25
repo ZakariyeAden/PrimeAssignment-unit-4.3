@@ -33,6 +33,22 @@ console.log(empty());
 
 
 
+// ********************
+//    Stretch Goals
+// ********************
+
+// Question 1:
+const maxItems = 5;
+
+// Question 2:
+
+function isFull(){
+    if(basket < maxItems){
+        return false;
+    } else if(basket >= maxItems){
+        return true;
+    } 
+}
 
 
 // DO NOT MODIFY
