@@ -14,8 +14,12 @@ function addItem(item){
     return true;
  }
 }
-
-
+// Question 3:
+function listItems(){
+   for(let cartItem of basket){
+       console.log(cartItem)
+   } 
+}
 
 
 
