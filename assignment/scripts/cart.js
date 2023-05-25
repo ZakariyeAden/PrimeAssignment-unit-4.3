@@ -2,9 +2,18 @@ console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
 
+// Question 1:
+let basket = [];
 
 
-
+// Question 2:
+function addItem(item){
+// Shouldn't the it be example: if(item === '') instead ? Although it works!
+ if(item){
+    basket.push(item);
+    return true;
+ }
+}
 
 
 
