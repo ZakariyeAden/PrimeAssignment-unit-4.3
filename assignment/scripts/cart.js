@@ -10,6 +10,7 @@ let basket = [];
 function addItem(item){
 // Shouldn't the it be example: if(item === '') instead ? Although it works!
  if(item){
+    //  Push to empty Array and return true
     basket.push(item);
     return true;
  } else {
@@ -20,12 +21,14 @@ function addItem(item){
 // Question 3:Create a function called `listItems`. It should:
 function listItems(){
    for(let cartItem of basket){
+    // List all the items from basket
        console.log(`List the items: ${cartItem}`)
    } 
 }
 
 // Question 4: Create a function called `empty`. It should:
 function empty(){
+    // Empty the Array 
     basket = [];
     console.log(`Reset Basket: ${basket}`);
 }
@@ -39,15 +42,16 @@ console.log(empty());
 //    Stretch Goals
 // ********************
 
-// Question 1:
+// Question 1: Added a global const named `maxItems` and set it to 5
 const maxItems = 5;
 
 // Question 2:
-
 function isFull(){
+    // If Basket less than maxItems return false
     if(basket < maxItems){
-        return false;
+        return false;   
     } else if(basket >= maxItems || basket){
+        // if basket more than or equal to maxItems OR basket full return true
         return true;
     } 
 }
@@ -65,6 +69,7 @@ function removeItem(item){
        basket.splice(removeFirstItem, 1);
        return item;
    }else {
+    // Return undefined if not found   
        return null;
    }
 }
