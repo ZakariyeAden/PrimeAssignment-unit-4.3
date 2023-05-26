@@ -12,6 +12,8 @@ function addItem(item){
  if(item){
     basket.push(item);
     return true;
+ } else {
+     return false;
  }
 }
 
@@ -45,11 +47,28 @@ const maxItems = 5;
 function isFull(){
     if(basket < maxItems){
         return false;
-    } else if(basket >= maxItems){
+    } else if(basket >= maxItems || basket){
         return true;
     } 
 }
+// basket = ['Cat','Dog','Shark','Fish','Test'];
 
+// Question 4:
+
+// console.log(`Test ${basket}`);
+function removeItem(item){
+   console.log(basket.indexOf(item));
+    // Only looking  first index and above   
+   if(basket.indexOf(item) >= 0){
+    // Remove the first item   
+    let removeFirstItem = basket.indexOf(item);
+       basket.splice(removeFirstItem, 1);
+       return item;
+   }else {
+       return null;
+   }
+}
+console.log(`Test ${basket}`);
 
 // DO NOT MODIFY
 // Used for automated testing
